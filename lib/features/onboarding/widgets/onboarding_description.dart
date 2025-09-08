@@ -22,7 +22,7 @@ class OnboardingDescription extends StatelessWidget {
         verticalSpace(30),
         Text(
           textExplain,
-          style: AppTextStyles.font24GoldBold,
+          style: AppTextStyles.font24GoldLighterMedium,
           textAlign: TextAlign.center,
         ),
       ],

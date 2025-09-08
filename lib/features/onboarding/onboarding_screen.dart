@@ -32,7 +32,7 @@ class OnboardingScreen extends StatelessWidget {
               size: Size(7, 7),
               color: ColorsManager.gray,
               activeSize: Size(18, 7),
-              activeColor: Color(0xffFFD482),
+              activeColor: ColorsManager.goldLighter,
               activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(25.0)),
               ),
