@@ -75,7 +75,7 @@ PageViewModel pageViewModelOne() {
         const SizedBoxForImageOnboarding(assetsImage: Assets.imagesKabba),
         verticalSpace(20),
         const OnboardingDescription(
-          textIdentification: 'مرحباً بك في تطبيق إسلامي',
+          textIdentification: 'مرحبًا بك في تطبيق إسلامي',
           textExplain: 'سعداء باختيارك تطبيق يقرّبك إلى الله',
         ),
       ],

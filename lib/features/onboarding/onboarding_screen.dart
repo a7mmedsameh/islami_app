@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:islami_app/core/helpers/constants.dart';
 import 'package:islami_app/core/helpers/extensions.dart';
 import 'package:islami_app/core/routing/routes.dart';
 import 'package:islami_app/core/theming/colors.dart';
@@ -25,6 +27,8 @@ class OnboardingScreen extends StatelessWidget {
               pageViewModelFour(),
             ],
             onDone: () {
+              final box = Hive.box(kOnboardingBoxName);
+              box.put(kOnboardingSeenKey, true);
               context.pushReplacementNamed(Routes.homeScreen);
             },
 

@@ -11,6 +11,12 @@ class AppTextStyles {
     color: ColorsManager.mainGold,
   );
 
+    static TextStyle font24Goldregular = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.mainGold,
+  );
+
     static TextStyle font24GoldLighterMedium = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.medium,
