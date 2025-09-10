@@ -8,7 +8,7 @@ import 'package:islami_app/core/routing/routes.dart';
 import 'package:islami_app/core/theming/colors.dart';
 import 'package:islami_app/core/theming/styles.dart';
 import 'package:islami_app/core/widgets/custom_scaffold.dart';
-import 'package:islami_app/features/onboarding/widgets/page_views_model.dart';
+import 'package:islami_app/features/onboarding/ui/widgets/page_views_model.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -29,7 +29,7 @@ class OnboardingScreen extends StatelessWidget {
             onDone: () {
               final box = Hive.box(kOnboardingBoxName);
               box.put(kOnboardingSeenKey, true);
-              context.pushReplacementNamed(Routes.homeScreen);
+              context.pushReplacementNamed(Routes.navigationScreen);
             },
 
             dotsDecorator: const DotsDecorator(

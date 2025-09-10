@@ -14,6 +14,10 @@ class Assets {
   /// assets/images/back_ground_splash_screen.png
   static const String imagesBackGroundSplashScreen = "assets/images/back_ground_splash_screen.png";
 
+  /// Assets for imagesBackgroundHome
+  /// assets/images/background_home.png
+  static const String imagesBackgroundHome = "assets/images/background_home.png";
+
   /// Assets for imagesBearish
   /// assets/images/bearish.png
   static const String imagesBearish = "assets/images/bearish.png";
@@ -42,6 +46,10 @@ class Assets {
   /// assets/images/moshaf.png
   static const String imagesMoshaf = "assets/images/moshaf.png";
 
+  /// Assets for imagesMoshafRecentHomePage
+  /// assets/images/moshaf_recent_home_page.png
+  static const String imagesMoshafRecentHomePage = "assets/images/moshaf_recent_home_page.png";
+
   /// Assets for imagesMosque
   /// assets/images/mosque.png
   static const String imagesMosque = "assets/images/mosque.png";
@@ -54,8 +62,32 @@ class Assets {
   /// assets/images/shape.png
   static const String imagesShape = "assets/images/shape.png";
 
+  /// Assets for svgsIconHadith
+  /// assets/svgs/icon_hadith.svg
+  static const String svgsIconHadith = "assets/svgs/icon_hadith.svg";
+
+  /// Assets for svgsIconRadio
+  /// assets/svgs/icon_radio.svg
+  static const String svgsIconRadio = "assets/svgs/icon_radio.svg";
+
+  /// Assets for svgsIconSebha
+  /// assets/svgs/icon_sebha.svg
+  static const String svgsIconSebha = "assets/svgs/icon_sebha.svg";
+
+  /// Assets for svgsIconTimeAzkar
+  /// assets/svgs/icon_time_azkar.svg
+  static const String svgsIconTimeAzkar = "assets/svgs/icon_time_azkar.svg";
+
   /// Assets for svgsIslamiLogo
   /// assets/svgs/islami_logo.svg
   static const String svgsIslamiLogo = "assets/svgs/islami_logo.svg";
+
+  /// Assets for svgsQuranIcon
+  /// assets/svgs/quran_icon.svg
+  static const String svgsQuranIcon = "assets/svgs/quran_icon.svg";
+
+  /// Assets for svgsVector
+  /// assets/svgs/vector.svg
+  static const String svgsVector = "assets/svgs/vector.svg";
 }
 

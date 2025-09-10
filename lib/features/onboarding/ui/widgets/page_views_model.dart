@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami_app/core/helpers/app_assets.dart';
 import 'package:islami_app/core/helpers/spacing.dart';
-import 'package:islami_app/features/onboarding/widgets/islami_logo_and_mosque.dart';
-import 'package:islami_app/features/onboarding/widgets/onboarding_description.dart';
-import 'package:islami_app/features/onboarding/widgets/sized_box_for_image_onboarding.dart';
+import 'package:islami_app/core/widgets/islami_logo_and_mosque.dart';
+import 'package:islami_app/features/onboarding/ui/widgets/onboarding_description.dart';
+import 'package:islami_app/features/onboarding/ui/widgets/sized_box_for_image_onboarding.dart';
 
 PageViewModel pageViewModelFour() {
   return PageViewModel(

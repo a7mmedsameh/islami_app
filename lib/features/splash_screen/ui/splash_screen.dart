@@ -4,7 +4,7 @@ import 'package:islami_app/core/routing/routes.dart';
 import 'package:islami_app/core/helpers/extensions.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:islami_app/core/helpers/constants.dart';
-import 'package:islami_app/features/splash_screen/widgets/stack_for_splash_screen.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/stack_for_splash_screen.dart';
 import 'package:islami_app/features/splash_screen/helpers/helper_splash.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen>
         box.get(kOnboardingSeenKey, defaultValue: false) as bool;
 
     final String targetRoute = hasSeen
-        ? Routes.homeScreen
+        ? Routes.navigationScreen
         : Routes.onBoardingScreen;
 
     if (!mounted) return;

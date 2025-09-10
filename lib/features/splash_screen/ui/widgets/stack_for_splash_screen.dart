@@ -1,12 +1,12 @@
 
 import 'package:flutter/material.dart';
-import 'package:islami_app/features/splash_screen/widgets/background_splash.dart';
-import 'package:islami_app/features/splash_screen/widgets/bottom_name_ahmed_sameh_splash.dart';
-import 'package:islami_app/features/splash_screen/widgets/center_logo_splash.dart';
-import 'package:islami_app/features/splash_screen/widgets/glow_splash.dart';
-import 'package:islami_app/features/splash_screen/widgets/left_shape_splash.dart';
-import 'package:islami_app/features/splash_screen/widgets/mosque_splash.dart';
-import 'package:islami_app/features/splash_screen/widgets/right_shape_splash.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/background_splash.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/bottom_name_ahmed_sameh_splash.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/center_logo_splash.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/glow_splash.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/left_shape_splash.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/mosque_splash.dart';
+import 'package:islami_app/features/splash_screen/ui/widgets/right_shape_splash.dart';
 
 class StackForSplashScreen extends StatelessWidget {
   const StackForSplashScreen({

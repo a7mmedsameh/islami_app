@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:islami_app/core/helpers/spacing.dart';
+import 'package:islami_app/features/home/ui/widgets/custom_title_text.dart';
+import 'package:islami_app/features/home/ui/widgets/list_view_builder_quran_list.dart';
+
+class QuranListTextAndListViewBuilder extends StatelessWidget {
+  const QuranListTextAndListViewBuilder({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Column(
+        children: [
+          const CustomTitleText(text: 'قائمة سور القرآن الكريم'),
+          verticalSpace(10),
+          const Expanded(child: ListViewBuilderQuranList()),
+        ],
+      ),
+    );
+  }
+}
