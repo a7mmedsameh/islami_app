@@ -50,6 +50,7 @@ dependencies:
   intl: ^0.20.2
   introduction_screen: ^4.0.0
   json_annotation: ^4.9.0
+  pretty_dio_logger: ^1.4.0
   retrofit: ^4.6.0
   retrofit_generator: ^9.7.0
   shared_preferences: ^2.5.3
