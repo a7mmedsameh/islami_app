@@ -34,6 +34,12 @@ class AppTextStyles {
     color: Colors.white,
   );
 
+      static TextStyle font20GoldBold = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: ColorsManager.mainGold,
+  );
+
   static TextStyle font16GoldBold = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.bold,

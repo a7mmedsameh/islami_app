@@ -3,9 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:islami_app/core/theming/colors.dart';
 
 class CustomScaffold extends StatelessWidget {
+  final PreferredSizeWidget? appBar;
   final Widget body;
 
-  const CustomScaffold({super.key, required this.body});
+  const CustomScaffold({
+    super.key,
+    required this.body,
+    this.appBar,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +20,10 @@ class CustomScaffold extends StatelessWidget {
       ),
     );
 
-    return Scaffold(backgroundColor: ColorsManager.black, body: body);
+    return Scaffold(
+      backgroundColor: ColorsManager.black,
+      body: body,
+      appBar: appBar,
+    );
   }
 }

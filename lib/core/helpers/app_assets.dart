@@ -42,6 +42,10 @@ class Assets {
   /// assets/images/logo_splash_screen.png
   static const String imagesLogoSplashScreen = "assets/images/logo_splash_screen.png";
 
+  /// Assets for imagesMaskGroup
+  /// assets/images/mask_group.png
+  static const String imagesMaskGroup = "assets/images/mask_group.png";
+
   /// Assets for imagesMoshaf
   /// assets/images/moshaf.png
   static const String imagesMoshaf = "assets/images/moshaf.png";
