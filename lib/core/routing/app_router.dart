@@ -16,13 +16,12 @@ class AppRouter {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
       case Routes.navigationScreen:
-        return MaterialPageRoute(builder: (_) => const NavigationScreen());
+        return MaterialPageRoute(
+          builder: (_) => const NavigationScreen(),
+        );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<HomeCubit>(),
-            child: const HomeScreen(),
-          ),
+          builder: (_) => const HomeScreen(),
         );
       default:
         return null;

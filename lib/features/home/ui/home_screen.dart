@@ -5,10 +5,10 @@ import 'package:islami_app/core/helpers/app_assets.dart';
 import 'package:islami_app/core/helpers/spacing.dart';
 import 'package:islami_app/core/widgets/app_text_field.dart';
 import 'package:islami_app/features/home/ui/widgets/background_for_home_page.dart';
+import 'package:islami_app/features/home/ui/widgets/bloc_builder_home_data_suhras.dart';
 import 'package:islami_app/features/home/ui/widgets/color_linear_for_home_page.dart';
 import 'package:islami_app/core/widgets/islami_logo_and_mosque.dart';
 import 'package:islami_app/features/home/ui/widgets/most_recently_text_and_list_view_builder.dart';
-import 'package:islami_app/features/home/ui/widgets/quran_list_text_and_list_view_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   verticalSpace(15),
-                 const IslamiLogoAndMosque(),
+                  const IslamiLogoAndMosque(),
                   verticalSpace(25),
                   const AppTextField(
                     hintText: 'اسم السورة',
@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                   verticalSpace(25),
                   const MostRecenltyTextAndListViewBuilder(),
                   verticalSpace(25),
-                  const QuranListTextAndListViewBuilder(),
+                  const BlocBuilderHomeDataSuhras(),
                 ],
               ),
             ),

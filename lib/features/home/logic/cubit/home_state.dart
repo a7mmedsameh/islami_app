@@ -9,10 +9,10 @@ class HomeState with _$HomeState {
   const factory HomeState.initial() = _Initial;
 
   // surahs
-  const factory HomeState.surahsLoading() = _SurahsLoading;
+  const factory HomeState.surahsLoading() = SurahsLoading;
   const factory HomeState.surahsSuccess(
     SurahsResponseModel surahsResponseModel,
-  ) = _SurahsSuccess;
+  ) = SurahsSuccess;
   const factory HomeState.surahsError(ApiErrorModel apiErrorModel) =
-      _SurahsError;
+      SurahsError;
 }

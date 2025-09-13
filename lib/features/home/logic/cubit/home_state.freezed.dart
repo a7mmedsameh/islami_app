@@ -55,13 +55,13 @@ extension HomeStatePatterns on HomeState {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _Initial value)?  initial,TResult Function( _SurahsLoading value)?  surahsLoading,TResult Function( _SurahsSuccess value)?  surahsSuccess,TResult Function( _SurahsError value)?  surahsError,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _Initial value)?  initial,TResult Function( SurahsLoading value)?  surahsLoading,TResult Function( SurahsSuccess value)?  surahsSuccess,TResult Function( SurahsError value)?  surahsError,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
-return initial(_that);case _SurahsLoading() when surahsLoading != null:
-return surahsLoading(_that);case _SurahsSuccess() when surahsSuccess != null:
-return surahsSuccess(_that);case _SurahsError() when surahsError != null:
+return initial(_that);case SurahsLoading() when surahsLoading != null:
+return surahsLoading(_that);case SurahsSuccess() when surahsSuccess != null:
+return surahsSuccess(_that);case SurahsError() when surahsError != null:
 return surahsError(_that);case _:
   return orElse();
 
@@ -80,13 +80,13 @@ return surahsError(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _Initial value)  initial,required TResult Function( _SurahsLoading value)  surahsLoading,required TResult Function( _SurahsSuccess value)  surahsSuccess,required TResult Function( _SurahsError value)  surahsError,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _Initial value)  initial,required TResult Function( SurahsLoading value)  surahsLoading,required TResult Function( SurahsSuccess value)  surahsSuccess,required TResult Function( SurahsError value)  surahsError,}){
 final _that = this;
 switch (_that) {
 case _Initial():
-return initial(_that);case _SurahsLoading():
-return surahsLoading(_that);case _SurahsSuccess():
-return surahsSuccess(_that);case _SurahsError():
+return initial(_that);case SurahsLoading():
+return surahsLoading(_that);case SurahsSuccess():
+return surahsSuccess(_that);case SurahsError():
 return surahsError(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -104,13 +104,13 @@ return surahsError(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _Initial value)?  initial,TResult? Function( _SurahsLoading value)?  surahsLoading,TResult? Function( _SurahsSuccess value)?  surahsSuccess,TResult? Function( _SurahsError value)?  surahsError,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _Initial value)?  initial,TResult? Function( SurahsLoading value)?  surahsLoading,TResult? Function( SurahsSuccess value)?  surahsSuccess,TResult? Function( SurahsError value)?  surahsError,}){
 final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
-return initial(_that);case _SurahsLoading() when surahsLoading != null:
-return surahsLoading(_that);case _SurahsSuccess() when surahsSuccess != null:
-return surahsSuccess(_that);case _SurahsError() when surahsError != null:
+return initial(_that);case SurahsLoading() when surahsLoading != null:
+return surahsLoading(_that);case SurahsSuccess() when surahsSuccess != null:
+return surahsSuccess(_that);case SurahsError() when surahsError != null:
 return surahsError(_that);case _:
   return null;
 
@@ -131,9 +131,9 @@ return surahsError(_that);case _:
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  initial,TResult Function()?  surahsLoading,TResult Function( SurahsResponseModel surahsResponseModel)?  surahsSuccess,TResult Function( ApiErrorModel apiErrorModel)?  surahsError,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
-return initial();case _SurahsLoading() when surahsLoading != null:
-return surahsLoading();case _SurahsSuccess() when surahsSuccess != null:
-return surahsSuccess(_that.surahsResponseModel);case _SurahsError() when surahsError != null:
+return initial();case SurahsLoading() when surahsLoading != null:
+return surahsLoading();case SurahsSuccess() when surahsSuccess != null:
+return surahsSuccess(_that.surahsResponseModel);case SurahsError() when surahsError != null:
 return surahsError(_that.apiErrorModel);case _:
   return orElse();
 
@@ -155,9 +155,9 @@ return surahsError(_that.apiErrorModel);case _:
 @optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  initial,required TResult Function()  surahsLoading,required TResult Function( SurahsResponseModel surahsResponseModel)  surahsSuccess,required TResult Function( ApiErrorModel apiErrorModel)  surahsError,}) {final _that = this;
 switch (_that) {
 case _Initial():
-return initial();case _SurahsLoading():
-return surahsLoading();case _SurahsSuccess():
-return surahsSuccess(_that.surahsResponseModel);case _SurahsError():
+return initial();case SurahsLoading():
+return surahsLoading();case SurahsSuccess():
+return surahsSuccess(_that.surahsResponseModel);case SurahsError():
 return surahsError(_that.apiErrorModel);case _:
   throw StateError('Unexpected subclass');
 
@@ -178,9 +178,9 @@ return surahsError(_that.apiErrorModel);case _:
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  initial,TResult? Function()?  surahsLoading,TResult? Function( SurahsResponseModel surahsResponseModel)?  surahsSuccess,TResult? Function( ApiErrorModel apiErrorModel)?  surahsError,}) {final _that = this;
 switch (_that) {
 case _Initial() when initial != null:
-return initial();case _SurahsLoading() when surahsLoading != null:
-return surahsLoading();case _SurahsSuccess() when surahsSuccess != null:
-return surahsSuccess(_that.surahsResponseModel);case _SurahsError() when surahsError != null:
+return initial();case SurahsLoading() when surahsLoading != null:
+return surahsLoading();case SurahsSuccess() when surahsSuccess != null:
+return surahsSuccess(_that.surahsResponseModel);case SurahsError() when surahsError != null:
 return surahsError(_that.apiErrorModel);case _:
   return null;
 
@@ -224,8 +224,8 @@ String toString() {
 /// @nodoc
 
 
-class _SurahsLoading implements HomeState {
-  const _SurahsLoading();
+class SurahsLoading implements HomeState {
+  const SurahsLoading();
   
 
 
@@ -235,7 +235,7 @@ class _SurahsLoading implements HomeState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SurahsLoading);
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SurahsLoading);
 }
 
 
@@ -256,8 +256,8 @@ String toString() {
 /// @nodoc
 
 
-class _SurahsSuccess implements HomeState {
-  const _SurahsSuccess(this.surahsResponseModel);
+class SurahsSuccess implements HomeState {
+  const SurahsSuccess(this.surahsResponseModel);
   
 
  final  SurahsResponseModel surahsResponseModel;
@@ -266,13 +266,13 @@ class _SurahsSuccess implements HomeState {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$SurahsSuccessCopyWith<_SurahsSuccess> get copyWith => __$SurahsSuccessCopyWithImpl<_SurahsSuccess>(this, _$identity);
+$SurahsSuccessCopyWith<SurahsSuccess> get copyWith => _$SurahsSuccessCopyWithImpl<SurahsSuccess>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SurahsSuccess&&(identical(other.surahsResponseModel, surahsResponseModel) || other.surahsResponseModel == surahsResponseModel));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SurahsSuccess&&(identical(other.surahsResponseModel, surahsResponseModel) || other.surahsResponseModel == surahsResponseModel));
 }
 
 
@@ -288,8 +288,8 @@ String toString() {
 }
 
 /// @nodoc
-abstract mixin class _$SurahsSuccessCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$SurahsSuccessCopyWith(_SurahsSuccess value, $Res Function(_SurahsSuccess) _then) = __$SurahsSuccessCopyWithImpl;
+abstract mixin class $SurahsSuccessCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory $SurahsSuccessCopyWith(SurahsSuccess value, $Res Function(SurahsSuccess) _then) = _$SurahsSuccessCopyWithImpl;
 @useResult
 $Res call({
  SurahsResponseModel surahsResponseModel
@@ -300,17 +300,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$SurahsSuccessCopyWithImpl<$Res>
-    implements _$SurahsSuccessCopyWith<$Res> {
-  __$SurahsSuccessCopyWithImpl(this._self, this._then);
+class _$SurahsSuccessCopyWithImpl<$Res>
+    implements $SurahsSuccessCopyWith<$Res> {
+  _$SurahsSuccessCopyWithImpl(this._self, this._then);
 
-  final _SurahsSuccess _self;
-  final $Res Function(_SurahsSuccess) _then;
+  final SurahsSuccess _self;
+  final $Res Function(SurahsSuccess) _then;
 
 /// Create a copy of HomeState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? surahsResponseModel = null,}) {
-  return _then(_SurahsSuccess(
+  return _then(SurahsSuccess(
 null == surahsResponseModel ? _self.surahsResponseModel : surahsResponseModel // ignore: cast_nullable_to_non_nullable
 as SurahsResponseModel,
   ));
@@ -322,8 +322,8 @@ as SurahsResponseModel,
 /// @nodoc
 
 
-class _SurahsError implements HomeState {
-  const _SurahsError(this.apiErrorModel);
+class SurahsError implements HomeState {
+  const SurahsError(this.apiErrorModel);
   
 
  final  ApiErrorModel apiErrorModel;
@@ -332,13 +332,13 @@ class _SurahsError implements HomeState {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$SurahsErrorCopyWith<_SurahsError> get copyWith => __$SurahsErrorCopyWithImpl<_SurahsError>(this, _$identity);
+$SurahsErrorCopyWith<SurahsError> get copyWith => _$SurahsErrorCopyWithImpl<SurahsError>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SurahsError&&(identical(other.apiErrorModel, apiErrorModel) || other.apiErrorModel == apiErrorModel));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SurahsError&&(identical(other.apiErrorModel, apiErrorModel) || other.apiErrorModel == apiErrorModel));
 }
 
 
@@ -354,8 +354,8 @@ String toString() {
 }
 
 /// @nodoc
-abstract mixin class _$SurahsErrorCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$SurahsErrorCopyWith(_SurahsError value, $Res Function(_SurahsError) _then) = __$SurahsErrorCopyWithImpl;
+abstract mixin class $SurahsErrorCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory $SurahsErrorCopyWith(SurahsError value, $Res Function(SurahsError) _then) = _$SurahsErrorCopyWithImpl;
 @useResult
 $Res call({
  ApiErrorModel apiErrorModel
@@ -366,17 +366,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$SurahsErrorCopyWithImpl<$Res>
-    implements _$SurahsErrorCopyWith<$Res> {
-  __$SurahsErrorCopyWithImpl(this._self, this._then);
+class _$SurahsErrorCopyWithImpl<$Res>
+    implements $SurahsErrorCopyWith<$Res> {
+  _$SurahsErrorCopyWithImpl(this._self, this._then);
 
-  final _SurahsError _self;
-  final $Res Function(_SurahsError) _then;
+  final SurahsError _self;
+  final $Res Function(SurahsError) _then;
 
 /// Create a copy of HomeState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? apiErrorModel = null,}) {
-  return _then(_SurahsError(
+  return _then(SurahsError(
 null == apiErrorModel ? _self.apiErrorModel : apiErrorModel // ignore: cast_nullable_to_non_nullable
 as ApiErrorModel,
   ));
