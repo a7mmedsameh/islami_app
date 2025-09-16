@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for fontsAmiriRegular
+  /// assets/fonts/amiri_regular.ttf
+  static const String fontsAmiriRegular = "assets/fonts/amiri_regular.ttf";
+
   /// Assets for fontsArbFONTSJannaLTRegular
   /// assets/fonts/ArbFONTS-Janna-LT-Regular.ttf
   static const String fontsArbFONTSJannaLTRegular = "assets/fonts/ArbFONTS-Janna-LT-Regular.ttf";
@@ -9,6 +13,14 @@ class Assets {
   /// Assets for fontsKamaliRegular
   /// assets/fonts/kamali.regular.ttf
   static const String fontsKamaliRegular = "assets/fonts/kamali.regular.ttf";
+
+  /// Assets for gifsIInsiderLoading
+  /// assets/gifs/iInsider_loading.gif
+  static const String gifsIInsiderLoading = "assets/gifs/iInsider_loading.gif";
+
+  /// Assets for gifsTrailLoading
+  /// assets/gifs/trail_loading.json
+  static const String gifsTrailLoading = "assets/gifs/trail_loading.json";
 
   /// Assets for imagesBackGroundSplashScreen
   /// assets/images/back_ground_splash_screen.png

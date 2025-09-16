@@ -18,7 +18,10 @@ class AppRouter {
       case Routes.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.surahDetailsScreen:
-        return MaterialPageRoute(builder: (_) => const SurahDetailsScreen());
+        return MaterialPageRoute(
+          builder: (_) =>
+              SurahDetailsScreen(surahNumber: settings.arguments as int),
+        );
       default:
         return null;
     }

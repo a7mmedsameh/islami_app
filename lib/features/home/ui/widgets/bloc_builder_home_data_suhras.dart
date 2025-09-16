@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami_app/core/di/dependency_injection.dart';
+import 'package:islami_app/core/widgets/setup_error.dart';
 import 'package:islami_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:islami_app/features/home/logic/cubit/home_state.dart';
 import 'package:islami_app/features/home/ui/widgets/quran_list_text_and_list_view_builder.dart';
@@ -23,14 +24,8 @@ class BlocBuilderHomeDataSuhras extends StatelessWidget {
               var surahsList = surahsResponseModel.data ?? [];
               return QuranListTextAndListViewBuilder(surahsList: surahsList);
             },
-            surahsError: (error) {
-              return Center(
-                child: Text(
-                  error.status.toString(),
-                  style: const TextStyle(color: Colors.red, fontSize: 16),
-                  textAlign: TextAlign.center,
-                ),
-              );
+            surahsError: (apiErrorModel) {
+              return setupError(apiErrorModel);
             },
             orElse: () {
               return const SizedBox.shrink();

@@ -28,16 +28,23 @@ class AppTextStyles {
     color: ColorsManager.black,
   );
 
-    static TextStyle font20WhiteBold = TextStyle(
+  static TextStyle font20WhiteBold = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.white,
   );
 
-      static TextStyle font20GoldBold = TextStyle(
+  static TextStyle font20GoldBold = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
     color: ColorsManager.mainGold,
+  );
+
+  static TextStyle font20WhiteBold2 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+    fontFamily: 'amiri',
   );
 
   static TextStyle font16GoldBold = TextStyle(
@@ -58,7 +65,7 @@ class AppTextStyles {
     color: ColorsManager.black,
   );
 
-    static TextStyle font14WhiteBold = TextStyle(
+  static TextStyle font14WhiteBold = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.white,

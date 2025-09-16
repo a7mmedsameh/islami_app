@@ -1,6 +1,7 @@
 class ApiConstants {
   static const String apiBaseUrl = 'https://api.alquran.cloud/v1/';
   static const String surah = 'surah';
+  static const String surahByNumber = '/surah/{number}';
 }
 
 

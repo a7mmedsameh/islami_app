@@ -1,68 +1,60 @@
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:islami_app/core/di/dependency_injection.dart';
 import 'package:islami_app/core/helpers/app_assets.dart';
-import 'package:islami_app/core/helpers/spacing.dart';
 import 'package:islami_app/core/theming/colors.dart';
-import 'package:islami_app/core/theming/styles.dart';
-import 'package:islami_app/core/widgets/custom_scaffold.dart';
+import 'package:islami_app/core/widgets/setup_error.dart';
+import 'package:islami_app/features/surah_details/logic/cubit/sura_details_cubit.dart';
+import 'package:islami_app/features/surah_details/logic/cubit/sura_details_state.dart';
+import 'package:islami_app/features/surah_details/ui/widgets/surah_details_item.dart';
+import 'package:lottie/lottie.dart';
 
 class SurahDetailsScreen extends StatelessWidget {
-  const SurahDetailsScreen({super.key});
+  final int surahNumber;
+  const SurahDetailsScreen({super.key, required this.surahNumber});
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: ColorsManager.mainGold),
-        backgroundColor: Colors.transparent,
-        title: Text("الفاتحة", style: AppTextStyles.font20GoldBold),
-        centerTitle: true,
-        toolbarHeight: 40,
-      ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset(Assets.imagesMaskGroup, width: 95.w, height: 95.h),
-                Text('الفاتحة', style: AppTextStyles.font24GoldBold),
-                Transform(
-                  alignment: Alignment.center,
-                  transform: Matrix4.rotationY(math.pi),
-                  child: Image.asset(
-                    Assets.imagesMaskGroup,
-                    width: 95.w,
-                    height: 95.h,
-                  ),
-                ),
-              ],
-            ),
-            verticalSpace(16),
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                border: Border.all(color: ColorsManager.mainGold, width: 1),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: const Center(
-                child: Text(
-                  "[1] بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-                  style: TextStyle(
-                    color: ColorsManager.mainGold,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
+    return BlocProvider(
+      create: (context) =>
+          getIt<SuraDetailsCubit>()..getSuraDetailsByNumber(surahNumber),
+      child: BlocBuilder<SuraDetailsCubit, SuraDetailsState>(
+        builder: (context, state) {
+          return state.maybeWhen(
+            suraDetailsStateError: (apiErrorModel) {
+              return Scaffold(body: setupError(apiErrorModel));
+            },
+            suraDetailsStateLoading: () {
+              return setupLoading();
+            },
+            suraDetailsStateSuccess: (suraDetailsResponseModel) {
+              var detailsSura = suraDetailsResponseModel.data;
+              return SurahDetailsItem(detailsSura: detailsSura!);
+            },
+            orElse: () {
+              return const SizedBox.shrink();
+            },
+          );
+        },
       ),
     );
   }
+}
+
+Widget setupLoading() {
+  return Container(
+    color: ColorsManager.black,
+    width: double.infinity,
+    height: double.infinity,
+    child: Center(
+      child: Lottie.asset(
+        Assets.gifsTrailLoading,
+        fit: BoxFit.contain,
+        repeat: true,
+        width: 170.w,
+        height: 170.h,
+      ),
+    ),
+  );
 }

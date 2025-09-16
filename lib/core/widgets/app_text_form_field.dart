@@ -8,13 +8,17 @@ import 'package:islami_app/core/theming/styles.dart';
 class AppTextField extends StatelessWidget {
   final String hintText;
   final String prefixIcon;
+  final TextEditingController? controller;
+  final void Function(String)? onChanged;
   const AppTextField({
-    super.key, required this.hintText, required this.prefixIcon,
+    super.key, required this.hintText, required this.prefixIcon, this.controller, this.onChanged,
   });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      onChanged: onChanged,
+      controller: controller,
       cursorColor: ColorsManager.mainGold,
       decoration: InputDecoration(
         hintText: hintText,

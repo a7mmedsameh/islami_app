@@ -17,7 +17,10 @@ class SurasQuranListTile extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            context.pushNamed(Routes.surahDetailsScreen);
+            context.pushNamed(
+              Routes.surahDetailsScreen,
+              arguments: surahsData?.number,
+            );
           },
           child: ListTile(
             contentPadding: const EdgeInsets.all(0),
@@ -52,9 +55,7 @@ class SurasQuranListTile extends StatelessWidget {
             ),
             title: Text(
               surahsData?.name ?? '',
-              style: AppTextStyles.font20WhiteBold.copyWith(
-                fontFamily: 'Roboto',
-              ),
+              style: AppTextStyles.font20WhiteBold2
             ),
           ),
         ),

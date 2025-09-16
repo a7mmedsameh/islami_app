@@ -9,46 +9,43 @@ class SurahsShimmerLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          Shimmer.fromColors(
-            direction: ShimmerDirection.rtl,
-            baseColor: ColorsManager.black,
-            highlightColor: Colors.white,
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Container(
-                height: 20.h,
-                width: 200.w,
-                decoration: BoxDecoration(
-                  color: ColorsManager.black,
-                  borderRadius: BorderRadius.circular(12.r),
-                ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Shimmer.fromColors(
+          direction: ShimmerDirection.rtl,
+          baseColor: ColorsManager.black,
+          highlightColor: Colors.white,
+          child: Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              height: 20.h,
+              width: 200.w,
+              decoration: BoxDecoration(
+                color: ColorsManager.black,
+                borderRadius: BorderRadius.circular(12.r),
               ),
             ),
           ),
-          verticalSpace(10),
-          Expanded(
-            child: ListView.separated(
-              physics: const BouncingScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: 8,
-              itemBuilder: (context, i) {
-                return const ShimmerItem();
-              },
-              separatorBuilder: (context, i) {
-                return const Divider(
-                  thickness: 1,
-                  color: Colors.white,
-                  indent: 30,
-                  endIndent: 30,
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+        ),
+        verticalSpace(10),
+        ListView.separated(
+          physics: const BouncingScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: 8,
+          itemBuilder: (context, i) {
+            return const ShimmerItem();
+          },
+          separatorBuilder: (context, i) {
+            return const Divider(
+              thickness: 1,
+              color: Colors.white,
+              indent: 30,
+              endIndent: 30,
+            );
+          },
+        ),
+      ],
     );
   }
 }
